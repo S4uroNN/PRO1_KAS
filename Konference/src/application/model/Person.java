@@ -9,7 +9,6 @@ public class Person {
         this.age = age;
     }
     //Getter & Setter---------------------------
-    //i wanna commit!!!
     public String getName() {
         return name;
     }
