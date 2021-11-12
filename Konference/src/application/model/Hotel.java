@@ -1,12 +1,12 @@
 package application.model;
 
-public class Person {
+public class Hotel {
     private String name;
-    private int age;
+    private double pris;
 
-    public Person(String name, int age) {
+    public Hotel(String name, double pris) {
         this.name = name;
-        this.age = age;
+        this.pris = pris;
     }
     //Getter & Setter---------------------------
     public String getName() {
@@ -17,12 +17,13 @@ public class Person {
         this.name = name;
     }
 
-    public int getAge() {
-        return age;
+    public double getPris() {
+        return pris;
     }
 
-    public void setAge(int age) {
-        this.age = age;
+    public void setPris(double pris) {
+        this.pris = pris;
     }
     //Getter & Setter---------------------------
+
 }
