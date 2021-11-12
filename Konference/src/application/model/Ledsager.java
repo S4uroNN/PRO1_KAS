@@ -15,6 +15,7 @@ public class Ledsager extends Person {
     public void setLedsager(boolean ledsager) {
         this.ledsager = ledsager;
     }
+    //Getter & Setter---------------------------
 }
 
 
