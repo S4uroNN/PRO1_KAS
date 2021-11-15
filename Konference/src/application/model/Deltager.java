@@ -6,6 +6,8 @@ public class Deltager extends Person {
     private boolean foredragsholder;
     private Ledsager ledsager;
     private Firma firma;
+    private Konference konference;
+    private Hotel hotel;
 
     public Deltager(String name, int age, boolean foredragsholder) {
         super(name, age); //henter fra superklassen
@@ -38,11 +40,35 @@ public class Deltager extends Person {
                 firma.addDeltager(this);
         }
     }
-    public Ledsager getLedsager(){
+
+    public Ledsager getLedsager() {
         return ledsager;
     }
-    public void setLedsager(Ledsager ledsager){
 
+    public void setLedsager(Ledsager ledsager) {
+        if (this.ledsager != ledsager) {
+            this.ledsager = ledsager;
+        }
+    }
+
+    public Konference getKonference() {
+        return konference;
+    }
+
+    public void addKonference(Konference konference) {
+        if (this.konference != konference) {
+            this.konference = konference;
+        }
+    }
+
+    public Hotel getHotel() {
+        return hotel;
+    }
+
+    public void setHotel(Hotel hotel) {
+        if (this.hotel != hotel) {
+            this.hotel = hotel;
+        }
     }
     //Link metoder-----------------------------
 }

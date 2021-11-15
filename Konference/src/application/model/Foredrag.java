@@ -5,6 +5,7 @@ public class Foredrag {
     private int tid;
     private String lokale;
     private Konference konference;
+    private Deltager deltager;
 
     public Foredrag(String emne, int tid, String lokale) {
         this.emne = emne;
@@ -54,5 +55,15 @@ public class Foredrag {
                 konference.addForedrag(this);
         }
     }
-    //Link Metoder---------------------------------------
+
+    public Deltager getforedragsholder() {
+        return deltager;
+    }
+
+    public void addForedragsholder(Deltager deltager) {
+        if (this.deltager != deltager) {
+            this.deltager = deltager;
+        }
+    }
 }
+//Link Metoder---------------------------------------
