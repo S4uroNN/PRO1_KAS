@@ -3,7 +3,9 @@ package storage;
 import application.model.*;
 
 import java.awt.image.AreaAveragingScaleFilter;
+
 import java.lang.reflect.Array;
+
 import java.util.ArrayList;
 
 public class Storage {
@@ -84,6 +86,11 @@ public class Storage {
     }
     //Arrangements
     //Hotel
+
+
+    //Hotel
+    //Firma
+
     private static ArrayList<Hotel> getHotels(){
         return new ArrayList<Hotel>(hotels);
     }
