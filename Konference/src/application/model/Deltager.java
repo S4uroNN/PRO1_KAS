@@ -60,6 +60,11 @@ public class Deltager extends Person {
             this.konference = konference;
         }
     }
+//    public void removeKonference(Konference konference){
+//        if(this.konference == konference){
+//            this.konference = null;
+//        }
+//    }
 
     public Hotel getHotel() {
         return hotel;
@@ -68,6 +73,12 @@ public class Deltager extends Person {
     public void setHotel(Hotel hotel) {
         if (this.hotel != hotel) {
             this.hotel = hotel;
+        }
+    }
+
+    public void removeHotel(Hotel hotel) {
+        if (this.hotel == hotel) {
+            this.hotel = null;
         }
     }
     //Link metoder-----------------------------

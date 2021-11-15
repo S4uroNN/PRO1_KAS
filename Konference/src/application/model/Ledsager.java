@@ -58,6 +58,11 @@ public class Ledsager extends Person {
             this.hotel = hotel;
         }
     }
+    public void removeHotel(Hotel hotel) {
+        if (this.hotel == hotel) {
+            this.hotel = null;
+        }
+    }
     //Link metoder------------------------------
 }
 

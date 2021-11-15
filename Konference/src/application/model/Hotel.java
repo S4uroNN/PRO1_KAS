@@ -33,7 +33,7 @@ public class Hotel {
     //Getter & Setter---------------------------
     //Link metoder -----------------------------
     public ArrayList<Deltager> getDeltagere() {
-        return new ArrayList<>(deltagere);
+        return new ArrayList<Deltager>(deltagere);
     }
 
     public void addDeltager(Deltager deltager) {
@@ -42,19 +42,26 @@ public class Hotel {
             deltager.setHotel(this);
         }
     }
-
+    public void removeDeltager(Deltager deltager){
+        deltagere.remove(deltager);
+        deltager.removeHotel(this);
+    }
 
 
     public ArrayList<Ledsager> getLedsagere() {
         return ledsagere;
     }
 
-    public void addDeltager(Ledsager ledsager) {
+    public void addLedsager(Ledsager ledsager) {
         if (!ledsagere.contains(ledsager)) {
             ledsagere.add(ledsager);
             ledsager.setHotel(this);
         }
+    } public void removeLedsager(Ledsager ledsager){
+        deltagere.remove(ledsager);
+        ledsager.removeHotel(this);
     }
+
 
     //Link metoder -----------------------------
 

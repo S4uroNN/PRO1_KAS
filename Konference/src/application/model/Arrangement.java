@@ -36,7 +36,7 @@ public class Arrangement {
     //Getter & Setter---------------------------
     //Link attributter--------------------------
     public ArrayList<Ledsager> getLedsagere(){
-        return new ArrayList<>(ledsagere);
+        return new ArrayList<Ledsager>(ledsagere);
     }
     public void addLedsager(Ledsager ledsager){
         if(!ledsagere.contains(ledsager)){
