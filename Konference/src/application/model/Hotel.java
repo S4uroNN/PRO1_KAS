@@ -8,6 +8,7 @@ public class Hotel {
         this.name = name;
         this.pris = pris;
     }
+
     //Getter & Setter---------------------------
     public String getName() {
         return name;
