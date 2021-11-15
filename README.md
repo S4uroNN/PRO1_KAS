@@ -1,5 +1,4 @@
 <div id="top"></div>
-:^)
 </div>
 
 
@@ -28,12 +27,12 @@ Projekt opgave til systemudvikling faget DMU-21s.
 - [ ] Grafisk brugergranseflade
 
 
-<!-- CONTACT -->
-## Contact
+<!-- CREDITS -->
+## Contributors
 
-- Tobiasz Topczewski - [Linkedin](https://www.linkedin.com/in/tobiasz-topczewski-59696919a) - tobiasz.top@gmail.com
-- Elin
-- Alex
+- Tobiasz Topczewski - [Linkedin](https://www.linkedin.com/in/tobiasz-topczewski-59696919a)
+- Alin Andrei Constantin
+- Alex Askov Klaris
 
 Project Link: [https://github.com/S4uroNN/PRO1_Projekter](https://github.com/S4uroNN/PRO1_Projekter)
 
