@@ -4,27 +4,27 @@ import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 public class Konference {
-    private int tid;
+    private String navn;
     private String lokation;
     private double pris;
     private final ArrayList<Foredrag> foredrags = new ArrayList<>();
     private final ArrayList<Arrangement> arrangements = new ArrayList<>();
     private final ArrayList<Deltager> deltagere = new ArrayList<>();
 
-    public Konference(int tid, String lokation, double pris) {
-        this.tid = tid;
+    public Konference(String navn, String lokation, double pris) {
+        this.navn = navn;
         this.lokation = lokation;
         this.pris = pris;
     }
 
     //Getter & Setter---------------------------
-    public int getTid() {
-        return tid;
-    }
-
-    public void setTid(int tid) {
-        this.tid = tid;
-    }
+//    public int getTid() {
+//        return tid;
+//    }
+//
+//    public void setTid(int tid) {
+//        this.tid = tid;
+//    }
 
     public String getLokation() {
         return lokation;

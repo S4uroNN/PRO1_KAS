@@ -87,10 +87,6 @@ public class Storage {
     //Arrangements
     //Hotel
 
-
-    //Hotel
-    //Firma
-
     private static ArrayList<Hotel> getHotels(){
         return new ArrayList<Hotel>(hotels);
     }

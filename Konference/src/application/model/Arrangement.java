@@ -8,6 +8,7 @@ public class Arrangement {
     private double pris;
     private Konference konference;
     private final ArrayList<Ledsager> ledsagere = new ArrayList<>();
+    private final ArrayList<Tilmelding> tilmeldninger = new ArrayList<>();
 
     Arrangement(String lokation, double pris,Konference konference) {
         this.lokation = lokation;
@@ -48,6 +49,12 @@ public class Arrangement {
         if(ledsagere.contains(ledsager)){
             ledsagere.remove(ledsager);
             ledsager.removeArrangements(this);
+        }
+    }
+    public void addTilmelding (Tilmelding tilmelding){
+        if(!tilmeldninger.contains(tilmelding)){
+            tilmeldninger.add(tilmelding);
+            tilmelding.addArrangement(this);
         }
     }
     //Link attributter--------------------------

@@ -2,12 +2,16 @@ package application.model;
 
 import javafx.scene.control.skin.TextInputControlSkin;
 
+import java.util.ArrayList;
+
 public class Deltager extends Person {
     private boolean foredragsholder;
     private Ledsager ledsager;
     private Firma firma;
     private Konference konference;
     private Hotel hotel;
+
+    private final ArrayList<Tilmelding> tilmeldinger = new ArrayList<>();
 
     public Deltager(String name, int age, boolean foredragsholder) {
         super(name, age); //henter fra superklassen
@@ -80,6 +84,14 @@ public class Deltager extends Person {
         if (this.hotel == hotel) {
             this.hotel = null;
         }
+    }
+
+    public Tilmelding createTilmelding(int attendingDays){
+        Tilmelding tilmelding = new Tilmelding(attendingDays);
+        tilmeldinger.add(tilmelding);
+        tilmelding.addDeltager(this);
+        return tilmelding;
+
     }
     //Link metoder-----------------------------
 }

@@ -42,7 +42,8 @@ public class Hotel {
             deltager.setHotel(this);
         }
     }
-    public void removeDeltager(Deltager deltager){
+
+    public void removeDeltager(Deltager deltager) {
         deltagere.remove(deltager);
         deltager.removeHotel(this);
     }
@@ -57,12 +58,14 @@ public class Hotel {
             ledsagere.add(ledsager);
             ledsager.setHotel(this);
         }
-    } public void removeLedsager(Ledsager ledsager){
+    }
+
+    public void removeLedsager(Ledsager ledsager) {
         deltagere.remove(ledsager);
         ledsager.removeHotel(this);
     }
 
 
     //Link metoder -----------------------------
-
 }
+
