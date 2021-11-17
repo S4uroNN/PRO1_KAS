@@ -32,79 +32,79 @@ public class Storage {
 
     //konference
     //Deltager
-    private static ArrayList<Deltager> getDeltagere() {
+    public static ArrayList<Deltager> getDeltagere() {
         return new ArrayList<Deltager>(deltagere);
     }
 
-    private static void addDeltager(Deltager deltager) {
+    public static void addDeltager(Deltager deltager) {
         deltagere.add(deltager);
     }
 
-    private static void removeDeltager(Deltager deltager) {
+    public static void removeDeltager(Deltager deltager) {
         deltagere.remove(deltager);
     }
 
     //Deltager
     //Ledsager
-    private static ArrayList<Ledsager> getLedsagere() {
+    public static ArrayList<Ledsager> getLedsagere() {
         return new ArrayList<Ledsager>(ledsagere);
     }
 
-    private static void addLedsager(Ledsager ledsager) {
+    public static void addLedsager(Ledsager ledsager) {
         ledsagere.add(ledsager);
     }
 
-    private static void removeLedsager(Ledsager ledsager) {
+    public static void removeLedsager(Ledsager ledsager) {
         ledsagere.remove(ledsager);
     }
 
     //Deltager
     //Foredrag
-    private static ArrayList<Foredrag> getForedrages() {
+    public static ArrayList<Foredrag> getForedrages() {
         return new ArrayList<Foredrag>(foredrages);
     }
 
-    private static void addForedrag(Foredrag foredrag) {
+    public static void addForedrag(Foredrag foredrag) {
         foredrages.add(foredrag);
     }
 
-    private static void removeForedrag(Foredrag foredrag) {
+    public static void removeForedrag(Foredrag foredrag) {
         foredrages.remove(foredrag);
     }
 
     //Foredrag
     //Arrangements
-    private static ArrayList<Arrangement> getArrangements() {
+    public static ArrayList<Arrangement> getArrangements() {
         return new ArrayList<Arrangement>(arrangements);
     }
 
-    private static void addArrangements(Arrangement arrangement) {
+    public static void addArrangements(Arrangement arrangement) {
         arrangements.add(arrangement);
     }
-    private static void removeArrangements(Arrangement arrangement){
+    public static void removeArrangements(Arrangement arrangement){
         arrangements.remove(arrangement);
     }
     //Arrangements
     //Hotel
 
-    private static ArrayList<Hotel> getHotels(){
+    public static ArrayList<Hotel> getHotels(){
         return new ArrayList<Hotel>(hotels);
     }
-    private static void addHotels(Hotel hotel){
+    public static void addHotels(Hotel hotel){
         hotels.add(hotel);
     }
-    private static void removeHotel(Hotel hotel){
+    public static void removeHotel(Hotel hotel){
         hotels.remove(hotel);
     }
     //Hotel
     //Firma
-    private static ArrayList<Firma> getFirmas(){
+    public static ArrayList<Firma> getFirmas(){
         return new ArrayList<Firma>(firmas);
     }
-    private static void addFirma(Firma firma){
+    public static void addFirma(Firma firma){
         firmas.add(firma);
     }
-    private static void removeFirma(Firma firma){
+    public static void removeFirma(Firma firma){
         firmas.remove(firma);
     }
     //Firma

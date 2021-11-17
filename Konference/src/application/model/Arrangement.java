@@ -10,7 +10,7 @@ public class Arrangement {
     private final ArrayList<Ledsager> ledsagere = new ArrayList<>();
     private final ArrayList<Tilmelding> tilmeldninger = new ArrayList<>();
 
-    Arrangement(String lokation, double pris,Konference konference) {
+    public Arrangement(String lokation, double pris, Konference konference) {
         this.lokation = lokation;
         this.pris = pris;
         this.konference = konference;
@@ -34,6 +34,7 @@ public class Arrangement {
     public Konference getKonference(){
         return konference;
     }
+    public void setKonference(Konference konference){ this.konference = konference;}
     //Getter & Setter---------------------------
     //Link attributter--------------------------
     public ArrayList<Ledsager> getLedsagere(){
