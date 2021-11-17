@@ -4,6 +4,8 @@ import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 public class Konference {
+
+
     private String navn;
     private String lokation;
     private double pris;
@@ -18,14 +20,13 @@ public class Konference {
     }
 
     //Getter & Setter---------------------------
-//    public int getTid() {
-//        return tid;
-//    }
-//
-//    public void setTid(int tid) {
-//        this.tid = tid;
-//    }
+    public String getNavn() {
+        return navn;
+    }
 
+    public void setNavn(String navn) {
+        this.navn = navn;
+    }
     public String getLokation() {
         return lokation;
     }

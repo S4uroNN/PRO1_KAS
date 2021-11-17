@@ -7,6 +7,7 @@ public class Hotel {
     private double pris;
     private final ArrayList<Deltager> deltagere = new ArrayList<>();
     private final ArrayList<Ledsager> ledsagere = new ArrayList<>();
+    private final ArrayList<Tilvalg> tilvalgs = new ArrayList<>();
 
     public Hotel(String name, double pris) {
         this.name = name;
@@ -64,7 +65,19 @@ public class Hotel {
         deltagere.remove(ledsager);
         ledsager.removeHotel(this);
     }
-
+    public ArrayList<Tilvalg> getTilvalgs(){
+        return new ArrayList<>(tilvalgs);
+    }
+    public void addTilvalg(Tilvalg tilvalg){
+        if(!tilvalgs.contains(tilvalg)){
+            tilvalgs.add(tilvalg);
+            tilvalg.addHotel(this);
+        }
+    }
+    public void removeTilvalg(Tilvalg tilvalg){
+        tilvalgs.remove(tilvalg);
+        tilvalg.removeHotel();
+        }
 
     //Link metoder -----------------------------
 }

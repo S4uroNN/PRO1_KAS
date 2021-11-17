@@ -1,13 +1,18 @@
 package application.model;
 
-import javax.swing.*;
-import java.util.ArrayList;
-
 public class App {
     public static void main(String[] args) {
         Konference k1 = new Konference("Hav & Himmel", "Odense",1500);
         Hotel h1 = new Hotel("Hvide svane",1050);
-        Hotel h2 = new Hotel("Hvide svane m wifi",1300);
+        Hotel h2 = new Hotel("Hvide svane m wifi",1250);
+
+
+        Tilvalg til1 = new Tilvalg("Wifi",50);
+        Tilvalg til1_1=new Tilvalg("Wifi",75);
+        Tilvalg til2 = new Tilvalg("Bad",200);
+        Tilvalg til3 = new Tilvalg("Morgenmad", 100);
+
+        h2.addTilvalg(til1);
 
         Arrangement a1 = k1.createArrangemtens("Egeskov",75);
         Arrangement a2 = k1.createArrangemtens("Trapholt",200);
@@ -32,6 +37,7 @@ public class App {
         t3.addHotel(h2);
         t3.addArrangement(a1);
         t3.addArrangement(a2);
+        t3.addTilvalg(til1);
         a1.addLedsager(l1);
         a2.addLedsager(l1);
         System.out.println(t3.beregnPris());
@@ -43,11 +49,14 @@ public class App {
         t4.addLedsager(l2);
         t4.addArrangement(a1);
         t4.addArrangement(a3);
+        t4.addTilvalg(til1);
         t4.addHotel(h2);
 
         System.out.println(t4.beregnPris());
 
-
+        for(Tilvalg s : t4.getTilvalgs()){
+            System.out.println(s.getInfo());
+        }
 
     }
 }
