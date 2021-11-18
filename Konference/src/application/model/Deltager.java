@@ -93,6 +93,11 @@ public class Deltager extends Person {
         return tilmelding;
 
     }
+    public Ledsager createLedsager(String navn, int age){
+        Ledsager ledsager = new Ledsager(navn,age);
+        this.ledsager = ledsager;
+        return ledsager;
+    }
     //Link metoder-----------------------------
 }
 

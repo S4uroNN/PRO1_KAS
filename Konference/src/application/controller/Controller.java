@@ -41,12 +41,14 @@ public class Controller {
         deltager.setAge(age);
         deltager.setForedragsholder(foredgagsholder);
     }
+    public void addDeltagerToKonference(Deltager deltager, Konference konference){
+        konference.addDeltager(deltager);
+    }
     //*--Deltager------------------------------------------------------------------------------------------------
 
     //*--Ledsager-------------------------------------------------------------------------------------------
-    public static Ledsager createLedsager(String name, int age, boolean isLedsager) {
-        Ledsager ledsager = new Ledsager(name, age, isLedsager);
-        return ledsager;
+    public static void addLedsager(Ledsager ledsager){
+        Storage.addLedsager(ledsager);
     }
 
     public static void deleteLedsager(Ledsager ledsager) {
@@ -56,7 +58,6 @@ public class Controller {
     public static void updateLedsager(Ledsager ledsager, String name, int age, boolean isLedsager) {
         ledsager.setName(name);
         ledsager.setAge(age);
-        ledsager.setLedsager(isLedsager);
     }
     //*--Ledsager------------------------------------------------------------------------------------------------
 
@@ -75,12 +76,14 @@ public class Controller {
         foredrag.setTid(tid);
         foredrag.setLokale(lokale);
     }
+    public static void addForedragToKonference(Foredrag foredrag,Konference konference) {
+        konference.addForedrag(foredrag);
+    }
     //*--Foredrag-----------------------------------------------------------------------------------------------
 
     //*--Arrangements-----------------------------------------------------------------------------------------------
-    public static Arrangement createArrangement(String lokation, double pris, Konference konference) {
-        Arrangement arrangement = new Arrangement(lokation, pris, konference);
-        return arrangement;
+    public static void addArragement(Arrangement arrangement){
+        Storage.addArrangements(arrangement);
     }
 
     public static void deleteArrangement(Arrangement arrangement) {
@@ -118,23 +121,13 @@ public class Controller {
         Storage.addFirma(firma);
         return firma;
     }
+    public static void deleteFirma(Firma firma){
+        Storage.removeFirma(firma);
+    }
+    public static void updateFirma(Firma firma, String cvr, String name){
+        firma.setCvr(cvr);
+        firma.setName(name);
+    }
     //*--Firma------------------------------------------------------------------------------------------------
-    //*--Tilmelding-------------------------------------------------------------------------------------------
-    public Tilmelding createTilmelding (Deltager deltager,int days,Hotel hotel,Ledsager ledsager,Tilvalg tilvalg,Konference konference,Arrangement arrangement) {
-        Tilmelding tilmelding = deltager.createTilmelding(days);
-        tilmelding.addArrangement(arrangement);
-        tilmelding.addHotel(hotel);
-        tilmelding.addTilvalg(tilvalg);
-        tilmelding.addLedsager(ledsager);
-
-        return tilmelding;
-    }
-    //*--Tilmelding-------------------------------------------------------------------------------------------
-    public void addForedragToKonference(Foredrag foredrag,Konference konference) {
-        konference.addForedrag(foredrag);
-    }
-    public void addDeltagerToKonference(Deltager deltager, Konference konference){
-        konference.addDeltager(deltager);
-    }
 
 }

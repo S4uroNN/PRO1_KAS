@@ -4,24 +4,22 @@ package application.model;
 import java.util.ArrayList;
 
 public class Ledsager extends Person {
-    private boolean ledsager;
     private Deltager deltager;
     private final ArrayList<Arrangement> arrangements = new ArrayList<>();
     private Hotel hotel;
 
-    public Ledsager(String name, int age, boolean ledsager) {
+    public Ledsager(String name, int age) {
         super(name, age); //henter fra superklassen
-        this.ledsager = ledsager;
     }
 
     //Getter & Setter---------------------------
-    public boolean isLedsager() {
-        return ledsager;
-    }
-
-    public void setLedsager(boolean ledsager) {
-        this.ledsager = ledsager;
-    }
+//    //public boolean isLedsager() {
+//        return ledsager;
+//    }
+//
+//    //public void setLedsager(boolean ledsager) {
+//        this.ledsager = ledsager;
+//    }
 
     //Getter & Setter---------------------------
     //Link metoder -----------------------------

@@ -1,6 +1,5 @@
 package application.model;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 public class Konference {
@@ -64,7 +63,7 @@ public class Konference {
     public ArrayList<Arrangement> getArrangements(){
         return new ArrayList<>(arrangements);
     }
-    public Arrangement createArrangemtens(String lokation, double pris){
+    public Arrangement createArrangemtens(String lokation, double pris, Konference konference){
         Arrangement arrangement = new Arrangement(lokation, pris,this);
         arrangements.add(arrangement);
         return arrangement;
