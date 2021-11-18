@@ -23,6 +23,9 @@ public class Controller {
         konference.setNavn(navn);
 
     }
+    public static ArrayList<Konference> getKonferencer(){
+        return Storage.getKonferencer();
+    }
     //*--Konference-------------------------------------------------------------------------------------------
 
     //*--Deltager-------------------------------------------------------------------------------------------
@@ -76,7 +79,7 @@ public class Controller {
         foredrag.setTid(tid);
         foredrag.setLokale(lokale);
     }
-    public static void addForedragToKonference(Foredrag foredrag,Konference konference) {
+    public static void addForedragToKonference(Foredrag foredrag, Konference konference) {
         konference.addForedrag(foredrag);
     }
     //*--Foredrag-----------------------------------------------------------------------------------------------
@@ -130,4 +133,18 @@ public class Controller {
     }
     //*--Firma------------------------------------------------------------------------------------------------
 
+    public static void initStorage(){
+        Konference k1 = Controller.createKonference("Hav & Himmel","Odense",1500);
+        Konference k2 = Controller.createKonference("V8 for liver","Aarhus", 2000);
+        Konference k3 = Controller.createKonference("Java is Life", "København", 2000);
+
+
+        Deltager d1 = Controller.createDeltager("Jan Magnussen", 38,false);
+        Deltager d2 = Controller.createDeltager("Lisbeth Jakobsen",38,false);
+        Deltager d3 = Controller.createDeltager("Jens Jensen",38, true);
+
+    }
+    public static void init(){
+        initStorage();
+    }
 }

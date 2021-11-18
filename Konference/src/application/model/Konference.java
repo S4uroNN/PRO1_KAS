@@ -42,6 +42,11 @@ public class Konference {
         this.pris = pris;
     }
 
+    @Override
+    public String toString() {
+        return navn + " (" + pris + " kroner)";
+    }
+
     //Getter & Setter-----------------------------
     //Link metoder--------------------------------
     public ArrayList<Foredrag> getForedrags() {

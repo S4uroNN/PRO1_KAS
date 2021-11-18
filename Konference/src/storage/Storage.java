@@ -9,7 +9,7 @@ import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 public class Storage {
-    private static ArrayList<Konference> konferencer = new ArrayList<>();
+    private static ArrayList<Konference> konferencer = new ArrayList<Konference>();
     private static ArrayList<Deltager> deltagere = new ArrayList<>();
     private static ArrayList<Ledsager> ledsagere = new ArrayList<>();
     private static ArrayList<Foredrag> foredrages = new ArrayList<>();
