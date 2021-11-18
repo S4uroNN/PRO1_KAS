@@ -136,7 +136,7 @@ public class Controller {
     public static void initStorage(){
         Konference k1 = Controller.createKonference("Hav & Himmel","Odense",1500);
         Konference k2 = Controller.createKonference("V8 for liver","Aarhus", 2000);
-        Konference k3 = Controller.createKonference("Java is Life", "København", 2000);
+        Konference k3 = Controller.createKonference("Java is Life", "København", 2500);
 
 
         Deltager d1 = Controller.createDeltager("Jan Magnussen", 38,false);
