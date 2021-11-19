@@ -9,13 +9,14 @@ import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 public class Storage {
-    private static ArrayList<Konference> konferencer = new ArrayList<Konference>();
+    private static ArrayList<Konference> konferencer = new ArrayList<>();
     private static ArrayList<Deltager> deltagere = new ArrayList<>();
     private static ArrayList<Ledsager> ledsagere = new ArrayList<>();
     private static ArrayList<Foredrag> foredrages = new ArrayList<>();
     private static ArrayList<Arrangement> arrangements = new ArrayList<>();
     private static ArrayList<Hotel> hotels = new ArrayList<>();
     private static ArrayList<Firma> firmas = new ArrayList<>();
+    private static ArrayList<Tilvalg> tilvalgs = new ArrayList<>();
 
     //Konference
     public static ArrayList<Konference> getKonferencer() {
@@ -85,6 +86,17 @@ public class Storage {
         arrangements.remove(arrangement);
     }
     //Arrangements
+    //Tilvalg
+    public static ArrayList<Tilvalg> getTilvalgs(){
+        return new ArrayList<Tilvalg>(tilvalgs);
+    }
+    public static void addTilvalg(Tilvalg tilvalg){
+        tilvalgs.add(tilvalg);
+    }
+    public static void removeTilvalg(Tilvalg tilvalg){
+        tilvalgs.remove(tilvalg);
+    }
+    //Tilvalg
     //Hotel
 
     public static ArrayList<Hotel> getHotels(){

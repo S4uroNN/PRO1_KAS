@@ -8,19 +8,16 @@ public class Ledsager extends Person {
     private final ArrayList<Arrangement> arrangements = new ArrayList<>();
     private Hotel hotel;
 
+
     public Ledsager(String name, int age) {
         super(name, age); //henter fra superklassen
     }
 
     //Getter & Setter---------------------------
-//    //public boolean isLedsager() {
-//        return ledsager;
-//    }
-//
-//    //public void setLedsager(boolean ledsager) {
-//        this.ledsager = ledsager;
-//    }
-
+    @Override
+    public String toString() {
+        return getName() + " , " + getAge() + " (" + deltager.toString() + ")";
+    }
     //Getter & Setter---------------------------
     //Link metoder -----------------------------
     public Deltager getDeltager() {

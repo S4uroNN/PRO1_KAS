@@ -68,10 +68,14 @@ public class Konference {
     public ArrayList<Arrangement> getArrangements(){
         return new ArrayList<>(arrangements);
     }
-    public Arrangement createArrangemtens(String lokation, double pris, Konference konference){
-        Arrangement arrangement = new Arrangement(lokation, pris,this);
+
+    public Arrangement createArrangemtens(String navn, String lokation, double pris, Konference konference){
+        Arrangement arrangement = new Arrangement(navn,lokation, pris,this);
         arrangements.add(arrangement);
         return arrangement;
+    }
+    public void removeArrangenments(Arrangement arrangement){
+        arrangements.remove(arrangement);
     }
     public ArrayList<Deltager> getDeltagere(){
         return new ArrayList<>(deltagere);
@@ -82,6 +86,10 @@ public class Konference {
             deltagere.add(deltager);
             deltager.addKonference(this);
         }
+    }
+    public void removeDeltager(Deltager deltager){
+        deltagere.remove(deltager);
+        deltager.removeKonference(this);
     }
     //Link metoder----------------------------------
 

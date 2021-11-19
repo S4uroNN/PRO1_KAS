@@ -27,6 +27,11 @@ public class Deltager extends Person {
         this.foredragsholder = foredragsholder;
     }
 
+    @Override
+    public String toString() {
+        return getName() + " , " + getAge();
+    }
+
     //Getter & Setter---------------------------
     //Link Meteder------------------------------
     public Firma getFirma() {
@@ -64,11 +69,11 @@ public class Deltager extends Person {
             this.konference = konference;
         }
     }
-//    public void removeKonference(Konference konference){
-//        if(this.konference == konference){
-//            this.konference = null;
-//        }
-//    }
+    public void removeKonference(Konference konference){
+        if(this.konference == konference){
+            this.konference = null;
+        }
+    }
 
     public Hotel getHotel() {
         return hotel;
@@ -96,6 +101,7 @@ public class Deltager extends Person {
     public Ledsager createLedsager(String navn, int age){
         Ledsager ledsager = new Ledsager(navn,age);
         this.ledsager = ledsager;
+        ledsager.setDeltager(this);
         return ledsager;
     }
     //Link metoder-----------------------------
