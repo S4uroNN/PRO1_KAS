@@ -1,6 +1,7 @@
 package application.controller;
 
 import application.model.*;
+import com.sun.javafx.image.impl.ByteIndexed;
 import storage.Storage;
 
 import java.util.ArrayList;
@@ -52,8 +53,11 @@ public class Controller {
     public static void addDeltagerToKonference(Deltager deltager, Konference konference){
         konference.addDeltager(deltager);
     }
-    public static ArrayList<Deltager> getDeltager(Konference konference){
+    public static ArrayList<Deltager> getDeltagerfromKonference(Konference konference){
         return new ArrayList<>(konference.getDeltagere());
+    }
+    public static ArrayList<Deltager> getDeltager(){
+        return new ArrayList<>(Storage.getDeltagere());
     }
 
     public static Tilmelding createTilmeldning(Deltager deltager,Ledsager ledsager, int days, Hotel hotel, Tilvalg tilvalg, Arrangement arrangement, Konference konference){
@@ -83,6 +87,9 @@ public class Controller {
         ledsager.setName(name);
         ledsager.setAge(age);
     }
+     public static void addLedsagerToArrangement(Ledsager ledsager,Arrangement arrangement){
+        ledsager.addArrangements(arrangement);
+     }
 
     //*--Ledsager------------------------------------------------------------------------------------------------
 
@@ -147,7 +154,9 @@ public class Controller {
         konference.setPris(pris);
         konference.setNavn(navn);
     }
-
+    public static ArrayList<Hotel> getHoteller(){
+        return Storage.getHotels();
+    }
 
     //*--Hotel------------------------------------------------------------------------------------------------
     //*--Tilvalg----------------------------------------------------------------------------------------------'

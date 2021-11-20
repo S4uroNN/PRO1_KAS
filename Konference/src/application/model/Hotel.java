@@ -31,6 +31,11 @@ public class Hotel {
         this.pris = pris;
     }
 
+    @Override
+    public String toString() {
+        return name + " " + pris;
+    }
+
     //Getter & Setter---------------------------
     //Link metoder -----------------------------
     public ArrayList<Deltager> getDeltagere() {
@@ -65,19 +70,22 @@ public class Hotel {
         deltagere.remove(ledsager);
         ledsager.removeHotel(this);
     }
-    public ArrayList<Tilvalg> getTilvalgs(){
+
+    public ArrayList<Tilvalg> getTilvalgs() {
         return new ArrayList<>(tilvalgs);
     }
-    public void addTilvalg(Tilvalg tilvalg){
-        if(!tilvalgs.contains(tilvalg)){
+
+    public void addTilvalg(Tilvalg tilvalg) {
+        if (!tilvalgs.contains(tilvalg)) {
             tilvalgs.add(tilvalg);
             tilvalg.addHotel(this);
         }
     }
-    public void removeTilvalg(Tilvalg tilvalg){
+
+    public void removeTilvalg(Tilvalg tilvalg) {
         tilvalgs.remove(tilvalg);
         tilvalg.removeHotel();
-        }
+    }
 
     //Link metoder -----------------------------
 }
